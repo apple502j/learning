@@ -5,8 +5,8 @@ Suits= "shcd"
 
 class Card:
     def __init__(self, Value, Suit):         
-        self.Value = Value                    #(integer)Value of card, Can Be 1-13
-        self.Suit = Suit                      #(string) Suit of card, Can Be H, D, C or S
+        self.Value = Value                    #(string)Value of card, Can Be A,2,3,4,5,6,7,8,9,T,J,Q,K
+        self.Suit = Suit                      #(string) Suit of card, Can Be h, d, c or s
         
 class Player:
     def __init__(self, Position, isDealer, holeCard):
