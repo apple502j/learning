@@ -2,6 +2,7 @@ import random
 
 Values= "A23456789TJQK"
 Suits= "shcd"
+used_cards = set()
 
 class Card:
     def __init__(self, Value, Suit):         
@@ -28,7 +29,9 @@ num_players = int(input("Enter nuber of players (2-10): "))
 if num_players in range(2,11):               #Dealing?
     iters = 0
     while iters < num_players:
-        index = random.randint(0, 52)
+        while index in used_cards:
+            index = random.randint(0, 52)
+        used_cards.add(index)
         print(Deck[index].Value + Deck[index].Suit)
         iters += 1
 else:
